@@ -26,7 +26,7 @@ void map_add_node(map *map, map_node *node)
     map->tail = node;
 }
 
-map_node *tmap_add(map *map, char *key, void *value)
+map_node *map_add(map *map, char *key, void *value)
 {
     map_node *node;
 
