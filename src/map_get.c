@@ -7,7 +7,7 @@
 #include <map.h>
 #include <string.h>
 
-map_node *map_get(map *map, char *key)
+map_node_t *map_get(map_t *map, char *key)
 {
     if (map == NULL)
         return NULL;

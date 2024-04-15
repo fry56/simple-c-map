@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void map_add_node(map *map, map_node *node)
+void map_add_node(map_t *map, map_node_t *node)
 {
     if (map == NULL || node == NULL)
         return;
@@ -26,15 +26,15 @@ void map_add_node(map *map, map_node *node)
     map->tail = node;
 }
 
-map_node *map_add(map *map, char *key, void *value)
+map_node_t *map_add(map_t *map, char *key, void *value)
 {
-    map_node *node;
+    map_node_t *node;
 
     if (map == NULL || key == NULL)
         return NULL;
     if (map_get(map, key) != NULL)
         return NULL;
-    node = calloc(1, sizeof(map_node));
+    node = calloc(1, sizeof(map_node_t));
     if (node == NULL)
         return NULL;
     node->value = value;

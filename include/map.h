@@ -15,19 +15,19 @@ typedef struct map_node {
     void *value;
     struct map_node *next;
     struct map_node *prev;
-} map_node;
+} map_node_t;
 
 typedef struct map {
-    map_node *head;
-    map_node *tail;
+    map_node_t *head;
+    map_node_t *tail;
     size_t length;
-} map;
+} map_t;
 
 #define map_foreach(map, node) \
-        for (map_node *node = map->head; node; node = node->next)
+        for (map_node_t *node = map->head; node; node = node->next)
 
-map *map_new(void);
-map_node *map_get(map *map, char *key);
-map_node *map_add(map *map, char *key, void *value);
-bool map_remove(map *map, char *key);
-map_node *map_set(map *map, char *key, void *value);
+map_t *map_new(void);
+map_node_t *map_get(map_t *map, char *key);
+map_node_t *map_add(map_t *map, char *key, void *value);
+bool map_remove(map_t *map, char *key);
+map_node_t *map_set(map_t *map, char *key, void *value);

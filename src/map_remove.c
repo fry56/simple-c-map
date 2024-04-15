@@ -8,9 +8,9 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-bool map_remove(map *map, char *key)
+bool map_remove(map_t *map, char *key)
 {
-    map_node *node = map_get(map, key);
+    map_node_t *node = map_get(map, key);
 
     if (node == NULL)
         return false;

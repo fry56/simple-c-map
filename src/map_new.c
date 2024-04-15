@@ -7,7 +7,7 @@
 #include <map.h>
 #include <stdlib.h>
 
-map *map_new(void)
+map_t *map_new(void)
 {
-    return calloc(1, sizeof(map));
+    return calloc(1, sizeof(map_t));
 }

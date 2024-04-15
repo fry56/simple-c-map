@@ -7,9 +7,9 @@
 #include <map.h>
 #include <string.h>
 
-map_node *map_set(map *map, char *key, void *value)
+map_node_t *map_set(map_t *map, char *key, void *value)
 {
-    map_node *node = map_get(map, key);
+    map_node_t *node = map_get(map, key);
 
     if (node == NULL)
         return NULL;
