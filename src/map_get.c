@@ -11,7 +11,7 @@ map_node_t *map_get(map_t *map, char *key)
 {
     if (map == NULL)
         return NULL;
-    map_foreach(map, node) {
+    for (map_node_t *node = map->head; node; node = node->next) {
         if (strcmp(node->key, key) == 0)
             return node;
     }

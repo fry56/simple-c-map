@@ -23,9 +23,6 @@ typedef struct map {
     size_t length;
 } map_t;
 
-#define map_foreach(map, node) \
-        for (map_node_t *node = map->head; node; node = node->next)
-
 map_t *map_new(void);
 map_node_t *map_get(map_t *map, char *key);
 map_node_t *map_add(map_t *map, char *key, void *value);
